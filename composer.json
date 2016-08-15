@@ -1,6 +1,6 @@
 {
     "name": "xmarcos/elasticsearch-service-provider",
-    "description": "A Silex Service Provider for Elasticsearch",
+    "description": "A Silex2 Service Provider for Elasticsearch",
     "type": "library",
     "license": "MIT",
     "keywords": [
@@ -20,7 +20,7 @@
     "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
-        "silex/silex"                 : "~1.1",
+        "silex/silex"                 : "~2.0",
         "elasticsearch/elasticsearch" : "~1.0"
     },
     "require-dev": {

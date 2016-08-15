@@ -2,10 +2,9 @@
 
 namespace xmarcos\Silex;
 
-use Silex\Application;
 use Elasticsearch\Client;
 use InvalidArgumentException;
-use Silex\ServiceProviderInterface;
+use Pimple\ServiceProviderInterface;
 
 class ElasticsearchServiceProvider implements ServiceProviderInterface
 {
@@ -28,7 +27,7 @@ class ElasticsearchServiceProvider implements ServiceProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function register(Application $app)
+    public function register(\Pimple\Container $app)
     {
         $prefix           = $this->prefix;
         $params_key       = sprintf('%s.params', $prefix);
