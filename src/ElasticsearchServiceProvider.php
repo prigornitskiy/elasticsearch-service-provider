@@ -33,11 +33,9 @@ class ElasticsearchServiceProvider implements ServiceProviderInterface
         $params_key       = sprintf('%s.params', $prefix);
         $app[$params_key] = isset($app[$params_key]) ? $app[$params_key] : [];
 
-        $app[$prefix] = $app->share(
-            function (Application $app) use ($params_key) {
+        $app[$prefix] = function (\Pimple\Container $app) use ($params_key) {
                 return new Client($app[$params_key]);
-            }
-        );
+            };
     }
 
     /**
