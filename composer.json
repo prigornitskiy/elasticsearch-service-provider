@@ -1,5 +1,5 @@
 {
-    "name": "xmarcos/elasticsearch-service-provider",
+    "name": "theluckyone/elasticsearch-service-provider",
     "description": "A Silex2 Service Provider for Elasticsearch",
     "type": "library",
     "license": "MIT",
