@@ -3,7 +3,7 @@
 namespace xmarcos\Silex;
 
 use Silex\Application;
-use Elasticsearch\Client;
+use Elasticsearch\ClientBuilder;
 use InvalidArgumentException;
 use Pimple\ServiceProviderInterface;
 
@@ -32,20 +32,9 @@ class ElasticsearchServiceProvider implements ServiceProviderInterface
     {
         $prefix           = $this->prefix;
         $params_key       = sprintf('%s.params', $prefix);
-        $app[$params_key] = isset($app[$params_key]) ? $app[$params_key] : [];
-
-        $app[$prefix] = $app->share(
-            function (Application $app) use ($params_key) {
-                return new Client($app[$params_key]);
-            }
-        );
+        $app['elasticsearch'] = function($app) use($params_key) {
+            return ClientBuilder::fromConfig($params_key);
+        };
     }
 
-    /**
-     * {@inheritdoc}
-     * @codeCoverageIgnore
-     */
-    public function boot(Application $app)
-    {
-    }
 }
