@@ -15,7 +15,7 @@ A [Silex](https://github.com/silexphp/Silex) Service Provider for the official [
 ```json
 {
     "require": {
-        "xmarcos/elasticsearch-service-provider": "dev-master"
+        "prigornitskiy/elasticsearch-service-provider": "master"
     }
 }
 ```
