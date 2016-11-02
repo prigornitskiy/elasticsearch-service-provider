@@ -28,7 +28,7 @@ class ElasticsearchServiceProvider implements ServiceProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function register(Application $app)
+    public function register(\Pimple\Container $app)
     {
         $prefix           = $this->prefix;
         $params_key       = sprintf('%s.params', $prefix);
