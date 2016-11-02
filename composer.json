@@ -20,7 +20,7 @@
     "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
-        "silex/silex"                 : "~1.1",
+        "silex/silex"                 : "~2.0",
         "elasticsearch/elasticsearch" : "~5.0"
     },
     "require-dev": {

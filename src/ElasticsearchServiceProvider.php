@@ -5,7 +5,7 @@ namespace xmarcos\Silex;
 use Silex\Application;
 use Elasticsearch\Client;
 use InvalidArgumentException;
-use Silex\ServiceProviderInterface;
+use Pimple\ServiceProviderInterface;
 
 class ElasticsearchServiceProvider implements ServiceProviderInterface
 {
